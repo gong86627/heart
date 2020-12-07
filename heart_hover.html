@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart_Hover</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #heart {
+            margin: 100px;
+            position: relative;
+            display: inline-block;
+            transition: all 1s;
+        }
+
+        #heart:hover {
+            transform: scale(1.5);
+        }
+
+        #heart>div {
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+
+        #heart>.left {
+            position: absolute;
+            bottom: 100%;
+            right: 100%;
+            transform: translate(50%, 50%) rotate(45deg);
+            border-radius: 50% 0 0 50%;
+        }
+
+        #heart>.right {
+            position: absolute;
+            bottom: 100%;
+            left: 100%;
+            transform: translate(-50%, 50%) rotate(45deg);
+            border-radius: 50% 50% 0 0;
+        }
+
+        #heart>.bottom {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>
